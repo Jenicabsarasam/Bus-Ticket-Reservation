@@ -1,0 +1,126 @@
+body{
+    background-image: url('DreamyBus.jpg');
+    background-size: contain;
+    color: white;
+}
+.home-icon{
+    text-align: end;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+.home-icon:hover{
+    opacity: 0.95;
+}
+.smallBox{
+    background: transparent;
+    border: 1px solid white;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: auto;
+    width: 38%;
+    margin-bottom:2%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    margin-top: 0;
+}
+.smallBox:hover{
+    border: 2px;
+}
+h2{ 
+    text-align: center;
+    font-weight: bolder;
+}
+::placeholder{
+    color: white;
+}
+#username[type=text]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px; 
+    color: white;
+    background-image: url('user.png');
+    background-position: 300px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+#pass1[type=password]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    color: white;
+    background-image: url('lock.png');
+    background-position: 300px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+#pass2[type=password]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    color: white;
+    background-image: url('lock.png');
+    background-position: 300px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+input[type=checkbox]{
+    width: 30px;
+    margin:0;
+    padding: 0;
+}
+#username[type=text]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+#email[type=text]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+#pass1[type=password]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+#pass2[type=password]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+#email[type=text]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px; 
+    color: white;
+    background-image: url('email.png');
+    background-position: 300px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+.register{
+    background-color: white;
+    font-family: Arial;
+    margin-top: 20px; 
+    height: 40px;
+    border: none;
+    border-radius: 23px;  
+    font-style: oblique;
+}
+.register:hover{
+    height: 42px;
+    background-color: aliceblue;
+}
+a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+    font-size: large;
+}

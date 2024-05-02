@@ -1,0 +1,93 @@
+body{
+    background-image: url('DreamyBus.jpg');
+    background-size: contain;
+    background-position: center;
+    color: white;
+    padding-top: 6px;
+}
+.home-icon{
+    text-align: end;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.home-icon:hover{
+    opacity: 0.95;
+}
+.smallBox{
+    background: transparent;
+    border: 1px solid white;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: auto;
+    width: 30%;
+    margin-bottom:5%;
+    padding: 20px;
+}
+.smallBox:hover{
+    border: 2px;
+}
+h2{ 
+    text-align: center;
+    font-weight: bolder;
+}
+::placeholder{
+    color: white;
+}
+input[type=text]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px; 
+    color: white;
+    background-image: url('user.png');
+    background-position: 300px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+input[type=password]{
+    background-color:transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    color: white;
+    background-image: url('lock.png');
+    background-position: 300px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+input[type=checkbox]{
+    width: 30px;
+    margin:0;
+}
+input[type=text]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+input[type=password]:focus {
+    border-width: 3px;
+    border-color: white !important;
+    outline: none;
+}
+.login{
+    background-color: white;
+    font-family: Arial;
+    margin-top: 20px; 
+    height: 40px;
+    border: none;
+    border-radius: 23px;  
+    font-style: oblique;
+}
+.login:hover{
+    height: 43px;
+    background-color: aliceblue;
+}
+a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+    font-size: large;
+}

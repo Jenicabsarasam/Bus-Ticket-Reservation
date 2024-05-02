@@ -1,0 +1,109 @@
+.Row{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) ;
+    padding: 15px;
+    background-image: url("crinkly-paper-texture.jpg");
+}
+.time{
+    font-size: x-large;
+}
+.name{
+    font-weight: 700;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(142, 147, 147);
+}
+.AC{
+    font-style: oblique;
+    color: rgb(110, 106, 106);
+    font-size:large;
+}
+.checked{
+    color: rgb(253, 205, 14);
+    font-size: x-large;
+}
+.fa{
+    font-size: x-large;
+}       
+.cost{
+    color: brown;
+    font-size: large;
+    font-weight: 700;
+}
+.bus-pic{
+    width: 90px;
+    margin-top: 10px;
+    border: 4px solid;
+    border-color: rgb(68, 68, 66);
+}
+.bus-pic:hover{
+    width:95px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+    transition: opacity 2s;
+}
+.watch{
+    width: 40px;
+    margin-right: 20px;
+}
+.watch:hover{
+    animation: shake 0.5s;
+}
+@keyframes shake{
+    0%{transform: translate(1px, 1px) rotate(0deg);}
+    10%{
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20%{transform: translate(-3px, 0px) rotate(1deg);
+    }
+}
+.seatPic{
+    width: 100px;
+}
+.span{
+    color: brown;
+}
+.badge{
+   background-color: rgb(72, 70, 70);
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   margin-bottom: 5px;
+   font-style: italic;
+}
+.section{
+    margin-bottom: 25px;
+    margin-right: 25px;
+}
+.whole{
+    padding-top: 30px;
+}
+h3{
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgb(142, 142, 134);
+    font-size: xx-large;
+    color: rgb(84, 4, 4);
+    font-size: 40px;
+}
+.selectButton{
+    background-color: rgb(20, 19, 19);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+}  
+.selectButton:hover{
+    font-size: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 30px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}  
+body{
+    background-color: rgb(58, 57, 57);
+} 
+.navbarText{
+    font-weight:bolder ;
+    text-shadow: 0 0 1.5px black, 0 2px white;
+    margin-left: 20px;
+}
+.homeIcon:hover{
+    width: 45px;
+    cursor: pointer;
+} 

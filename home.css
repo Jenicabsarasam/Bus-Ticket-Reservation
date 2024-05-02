@@ -1,0 +1,136 @@
+body{
+  margin-bottom: 0px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  background-image: url('empty-street-dark-atmosphere.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+.header{
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  color: #fff;
+  padding: 9px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+.logo{
+  flex: 1;
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li{
+  margin-right: 20px;
+}
+nav ul li:first-child{
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+} 
+nav ul li a:hover{
+  font-size: larger;
+  color: aliceblue;
+}
+.main{
+  margin-top: 100px;
+  background-color: transparent;
+}
+.journey{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: 0 0 15px rgb(19, 89, 114); 
+}
+
+.book-btn{
+  text-align: center;
+  margin-top: 20px;
+}
+.book{
+  font-size: 30px;
+}
+.book:hover{
+  box-shadow: 0 0 9px rgba(0,0,0.5);
+}
+.btn-light:hover{
+  font-size: larger;
+  background-color: rgb(240, 248, 255);
+}
+.canva-btn{
+  background-color: transparent;
+  border: none;
+}
+.offcanvas{
+  background-image: url('bluebg.jpg'); 
+}
+.canva-heading {
+  font-family: Georgia;
+  font-style: italic;
+  position: relative;
+  animation: wavy 1s infinite;
+  color: rgb(12, 11, 45);
+}
+.icon{
+  width: 35px;
+  margin-right: 30px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+@keyframes wavy {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.modal-content{
+  background-image: url('empty-street-dark-atmosphereblur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 700px;
+  height: 200px;
+  border: 3px solid rgb(151, 147, 147);
+}
+.modal-body{
+  font-weight: bolder;
+  text-shadow: 0 0 6px rgb(0, 0, 0);
+  text-align: center;
+}
+.ourclose{
+  text-align: end;
+}
+.modal-btn{
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0.5);
+  text-shadow: 0 0 2px rgb(241, 241, 247);
+}
+.modal-btn:hover{
+  cursor: pointer;
+  font-size: 22px;
+}
+
+
+

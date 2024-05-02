@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+*{
+  box-sizing: border-box;
+}
+body {
+  background-image: url('people1.jpg');
+  backdrop-filter: blur(6px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+#bus {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  margin-top: 5px;
+}
+label{
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+}
+.container {
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding: 5px 30px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  box-shadow:  0 0 5px rgb(184, 184, 184);
+}
+.container:hover{
+  border-bottom: 3px solid rgb(112, 108, 108);
+  border-right: 3px solid rgb(27, 27, 27);
+  border-radius: 15px;
+}
+
+.seat {
+  background-color: #aab96d;
+  height: 30px;
+  width: 35px;
+  margin: 5px;
+  font-size: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.seat.selected {
+  background-color: rgb(255, 255, 255);
+}
+.seat.sold {
+  background-color: #898b8d;
+}
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+.showcase {
+  background: rgba(16, 16, 22, 0.1);
+  padding: 3px 10px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: x-large;
+  list-style-type: none;
+  display: flex;
+  margin-right: 10px;
+  justify-content: space-between;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 2px;
+}
+.row {
+  display: flex;
+}
+p.text{
+  margin-top: 7px;
+    font-size: 30px;
+    color: #ffffff;
+}
+p.text span{
+    color: rgb(244, 138, 0);
+    font-size: 30px;  
+}
+.space{
+  width: 89px;
+}
+.homeIcon{
+  margin-left: 570px;
+  margin-top: 2px;
+}
+.homeIcon:hover{
+  width: 40px;
+}
+.paymentBtn{
+  margin-left: 100px;
+  font-size: 25px;
+  padding: 5px 13px;
+  margin-bottom: 3px;
+  border-radius: 25px;
+  background-color: #dce37b;
+  color: rgb(39, 4, 4);
+  font-weight: 700;
+  border: none;
+}
+.paymentBtn:hover{
+  box-shadow: 0 0 5px rgb(242, 171, 136);
+  background-color: #e7f05f;
+}

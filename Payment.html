@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    body {
+      background-image: url('water12.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif; 
+    }
+
+    .header {
+      background-color: rgba(3, 3, 3, 0.9);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header a {
+      text-decoration: none;
+      color: #fffdfd;
+      margin-left: 10px;
+      font-weight: bold;
+      transition: text-decoration 0.3s; 
+    }
+
+    .header a:hover {
+      text-decoration: underline; 
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #fffdfd; 
+    }
+
+    .payment-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .payment-box {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9); 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dialog {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background-color: #fff; 
+      border: 2px solid #2c3e50; 
+      border-radius: 10px;
+      z-index: 999;
+      text-align: center;
+      color: #2c3e50; 
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .payment-options {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .payment-option {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .payment-option label {
+      margin-left: 10px;
+      width: 150px; 
+      display: inline-block;
+    }
+
+    .payment-option img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+
+    #paymentSuccess {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #unfilledDetailsPopup {
+      display: none;
+      background-color: rgba(255, 0, 0, 0.5);
+      color: #fff; 
+      padding: 10px 20px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Voyage</h1>
+  <div>
+    <a href="home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="FAQ.html">FAQs</a>
+    <a href="Offers.html">Offers</a>
+  </div>
+</div>
+
+<div class="payment-container">
+  <div class="payment-box">
+    <h1>Select Payment Method</h1>
+
+    <form id="paymentForm">
+      <div class="payment-options">
+        <div class="payment-option">
+          <img src="master-card-icon.png" alt="Card">
+          <input type="radio" id="card" name="paymentMethod" value="card">
+          <label for="card">Credit/Debit Card</label>
+        </div>
+
+        <div class="payment-option">
+          <img src="upi-icon.png" alt="UPI">
+          <input type="radio" id="upi" name="paymentMethod" value="upi">
+          <label for="upi">UPI</label>
+        </div>
+
+        <div class="payment-option">
+          <img src="net-banking-icon (1).png" alt="Net Banking">
+          <input type="radio" id="netbanking" name="paymentMethod" value="netbanking">
+          <label for="netbanking">Net Banking</label>
+        </div>
+      </div>
+    </form>
+
+    <button onclick="makePayment()">Make Payment</button>
+
+    <div id="dialog" class="dialog">
+      <div id="paymentDetails"></div>
+    </div>
+
+    <div id="cardDetails" class="dialog">
+      <h2>Enter Card Details</h2>
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber" required><br>
+      <br>
+      <label for="expiryMonth">Expiry Month:</label>
+      <input type="text" id="expiryMonth" name="expiryMonth" required><br>
+      <br>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required><br>
+      <br>
+      <label for="cardName">Name on Card:</label>
+      <input type="text" id="cardName" name="cardName" required><br>
+      <br>
+      <button onclick="submitCardDetails()">Submit</button>
+      <button onclick="closeDialog('cardDetails')">Close</button>
+    </div>
+
+    <div id="upiDetails" class="dialog">
+      <h2>Enter UPI ID</h2>
+      <label for="upiID">UPI ID:</label>
+      <input type="text" id="upiID" name="upiID" required><br>
+      <button onclick="verifyUpiId()">Verify and Pay</button>
+      <button onclick="closeDialog('upiDetails')">Close</button>
+    </div>
+
+    <div id="netbankingDetails" class="dialog">
+      <h2>Enter Net Banking Details</h2>
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" name="accountNumber" required><br>
+      <br>
+      <label for="ifscCode">IFSC Code:</label>
+      <input type="text" id="ifscCode" name="ifscCode" required><br>
+      <br>
+      <label for="accountHolderName">Account Holder's Name:</label>
+      <input type="text" id="accountHolderName" name="accountHolderName" required><br>
+      <br>
+      <button onclick="submitNetbankingDetails()">Make Payment</button>
+      <button onclick="closeDialog('netbankingDetails')">Close</button>
+    </div>
+
+    <div id="paymentSuccess" class="dialog">
+      Payment Successful!
+    </div>
+
+    <div id="unfilledDetailsPopup" class="dialog">Please fill in all the details.</div>
+  </div>
+</div>
+
+<script>
+  function makePayment() {
+    var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+    if (!paymentMethod) {
+      document.getElementById("unfilledDetailsPopup").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("unfilledDetailsPopup").style.display = "none";
+      }, 3000);
+      return;
+    }
+
+    switch (paymentMethod.value) {
+      case "card":
+        document.getElementById("cardDetails").style.display = "block";
+        break;
+      case "upi":
+        document.getElementById("upiDetails").style.display = "block";
+        break;
+      case "netbanking":
+        document.getElementById("netbankingDetails").style.display = "block";
+        break;
+    }
+  }
+
+  function submitCardDetails() {
+    
+    var cardNumber = document.getElementById("cardNumber").value;
+    var expiryMonth = document.getElementById("expiryMonth").value;
+    var cvv = document.getElementById("cvv").value;
+    var cardName = document.getElementById("cardName").value;
+
+    if (!cardNumber || !expiryMonth || !cvv || !cardName) {
+      document.getElementById("unfilledDetailsPopup").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("unfilledDetailsPopup").style.display = "none";
+      }, 3000);
+      return;
+    }
+
+    
+    document.getElementById("cardDetails").style.display = "none";
+    document.getElementById("paymentSuccess").style.display = "block";
+    
+    setTimeout(function() {
+      window.location.href ='home.html';
+    }, 2000);
+  }
+
+  function verifyUpiId() {
+    var upiId = document.getElementById("upiID").value;
+
+    
+    document.getElementById("upiDetails").style.display = "none";
+    document.getElementById("paymentSuccess").style.display = "block"; 
+    setTimeout(function() {
+      window.location.href = "home.html";
+    }, 2000);
+  }
+
+  function submitNetbankingDetails() {
+   
+    var accountNumber = document.getElementById("accountNumber").value;
+    var ifscCode = document.getElementById("ifscCode").value;
+    var accountHolderName = document.getElementById("accountHolderName").value;
+
+    if (!accountNumber || !ifscCode || !accountHolderName) {
+      document.getElementById("unfilledDetailsPopup").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("unfilledDetailsPopup").style.display = "none";
+      }, 3000);
+      return;
+    }
+
+    
+    document.getElementById("netbankingDetails").style.display = "none";
+    document.getElementById("paymentSuccess").style.display = "block"; 
+    setTimeout(function() {
+      window.location.href = "home.html";
+    }, 2000);
+  }
+
+  function closeDialog(dialogId) {
+    document.getElementById(dialogId).style.display = "none";
+  }
+</script>
+</body>
+</html>

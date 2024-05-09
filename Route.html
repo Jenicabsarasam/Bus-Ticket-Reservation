@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Paytone+One" rel="stylesheet">
-    
+    <title>Route</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
             background: url(logoo.webp);
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .para {
+        .nav-item:hover{
+            color: white;
+            text-decoration: underline;
+        }
+        .para{
             text-align: center;
             border: solid 2px black;
             width: 40%;
             height: 20%;
             border-style: dashed;
             border-radius: 5%;
-            margin-left: 22%;
+            margin-left: 27%;
             padding-top: 10px;
             color: rgb(5, 1, 1);
             letter-spacing: 1px;
             font-family: cursive;
             font-size: large;
-            margin-bottom: 0px;
-        }
-        .tabshead {
-            font-weight: bold;
-            font-size: 1.5em;
-            color: rgb(27, 114, 200);
+            margin-bottom: 50px;
+            margin-top: 120px;
         }
         #second {
             margin-top:10px;
@@ -45,7 +41,6 @@
             height: 80%;
             margin-bottom: 0px;
         }
-
         .drop {
             color: black;
             width: 30%;
@@ -56,21 +51,15 @@
             margin-left: 1.2%;
             background-color: rgb(203, 228, 225)
         }
+        .tabshead {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: rgb(27, 114, 200);
+        }
         .lab {
             color: aliceblue;
-        }
-        .dro {
-            width: 65%;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: rgb(203, 228, 225);
-        }
-        .cont{
-            margin-top: 0px;
-            padding: 90px;
-            max-width: 800px;
-            color: #fff;
-            text-align:center;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         .sub {
             background-color: aliceblue;
@@ -80,11 +69,17 @@
             border-radius: 4px;
             font-size: large;
             margin-bottom: 5px;
-        }  
-        .nav-item:hover{
+        } 
+        .cont{
+            margin-top: 0px;
+            padding: 90px;
+            max-width: 800px;
+            color: #fff;
+            text-align:center;
+        }
+        .icon{
             color: white;
-            text-decoration: underline;
-        }        
+        }
     </style>
 </head>
 <body>
@@ -93,39 +88,30 @@
             <a class="navbar-brand fw-bold">VOYAGE</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="About.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="FAQ.html">FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="SignIn.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="Register.html">Sign Up</a>
-                </li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="About.html">About</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Offers.html">Offers</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="SignIn.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Register.html">Sign Up</a></li>
             </ul>
-            </div>
+        </div>
         </div>
     </nav>
+    <div class="para">
+        <p><b> Start Your experience </b></p>
+    </div>
+    <div class="container" id="second">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active tabshead" aria-current="page" href="#menu1"><i class="bi bi-bus-front"></i>  Bus</a></li>
+    </ul>
 
-        <div class="para">
-            <p><b> Start Your experience </b></p>
-        </div>
-    <div class="container" id="second" class="glowing-card">
-        <ul class="nav nav-tabs">
-            <li class="active"><a class="tabshead" data-toggle="tab" href="#menu1"><i class="fas fa-bus"></i>  Bus</a></li>
-        </ul>
-        <div class="tab-content" id="nav-tabContent">
-            <div id="menu1" class="tab-pane fade in active">
-                <h3 class="lab">Buses</h3><br>  
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div id="menu1">
+                <h3 class="lab">Buses</h3>
                 <form>
                     <select name="origin" class="drop" id="from">
-                        <option value="Origin">From</option>
+                        <option value="From">From</option>
                         <option value="Mumbai">Mumbai</option>
                         <option value="Chennai">Chennai</option>
                         <option value="Kolkata">Kolkata</option>
@@ -134,7 +120,7 @@
                         <option value="Andhra">Andhra Pradesh</option>
                         <option value="Kerala">Kerala</option>
                     </select>
-                    <i class="fas fa-exchange-alt" style="color: rgb(244, 241, 244);"></i>
+                    <i class="bi bi-arrow-left-right icon"></i>
                     <select name="destination" class="drop" id="to">
                         <option value="Origin">To</option>
                         <option value="Mumbai">Mumbai</option>
@@ -147,11 +133,11 @@
                     </select><br>
                     <input type="number" class="drop" min="1" max="10" placeholder="Number of passengers">
                     <input type="date" class="drop"><br>
-                    
-                    <center><button type="button" class="sub" onclick="listpage();">Book tickets</button></center>
+                    <center><button type="button" class="sub" onclick="listpage();">Book Tickets</button> </center>
                 </form>
             </div>
         </div>
+    </div>
     </div>
     <div class="cont">
         <p>&copy; 2006 Voyage. All rights reserved.</p>

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
         body {
             background: url(faqf.webp);
@@ -32,10 +33,7 @@
             font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .card-img-top {
-            height: 300px; 
-            object-fit: cover; 
-        }
+        
         .nav-item:hover{
             color: white;
             text-decoration: underline;
@@ -53,9 +51,8 @@
             color:rgb(47, 0, 61);
         }
         .faq-answer.show {
-            display: block;
+            display:block;
         }
-        
     </style>
 </head>
 <body>
@@ -64,21 +61,11 @@
             <a class="navbar-brand fw-bold">VOYAGE</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="About.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="Offers.html">Offers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="SignIn.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="Register.html">Sign Up</a>
-                </li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="About.html">About</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Offers.html">Offers</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="SignIn.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="Register.html">Sign Up</a></li>
             </ul>
         </div>
         </div>
@@ -87,35 +74,35 @@
         <section class="popular-topics">
             <h2>Popular Questions</h2><hr>
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(1)"><i class="fas fa-chevron-right"></i> How do I book a bus ticket?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(1)"><i class="bi bi-chevron-right"></i> How do I book a bus ticket?</h5>
                 <p class="faq-answer" id="answer1">To book a bus ticket, simply visit our website, select your desired origin and destination, choose your travel date, enter the number of passengers, and click on the 'Submit' button. Follow the on-screen instructions to complete the booking process.</p>
             </div><hr>
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(2)"><i class="fas fa-chevron-right"></i>Can I cancel my bus ticket?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(2)"><i class="bi bi-chevron-right"></i> Can I cancel my bus ticket?</h5>
                 <p class="faq-answer" id="answer2">Yes, you can cancel your bus ticket depending on the cancellation policy of the bus operator.</p>
             </div><hr>
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(3)"><i class="fas fa-chevron-right"></i> How can I pay for my bus ticket?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(3)"><i class="bi bi-chevron-right"></i> How can I pay for my bus ticket?</h5>
                 <p class="faq-answer" id="answer3">We accept various payment methods including credit/debit cards, net banking, and mobile wallets. You can choose your preferred payment option during the booking process.</p>
             </div><hr>
         
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(4)"><i class="fas fa-chevron-right"></i> What should I do if I face any issues during booking?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(4)"><i class="bi bi-chevron-right"></i> What should I do if I face any issues during booking?</h5>
                 <p class="faq-answer" id="answer4">If you encounter any issues during the booking process, please contact our customer support team for assistance. You can reach us via email, phone. </p>
             </div><hr> 
         </section>
         <section class="faqs">
             <h2>FAQs about Voyage</h2><hr>
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(5)"><i class="fas fa-chevron-right"></i> Does booking online cost me more?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(5)"><i class="bi bi-chevron-right"></i> Does booking online cost me more?</h5>
                 <p class="faq-answer" id="answer5">Not at all! The price of the bus ticket is the same as you would get from the bus operator too.The price is the same or sometimes discounted depending on the season/time.</p>
             </div><hr>
             <div class="faq-item">
-                <h5 class="faq-question" onclick="toggleAnswer(6)"><i class="fas fa-chevron-right"></i> Do I need to register to use redBus?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(6)"><i class="bi bi-chevron-right"></i> Do I need to register to use redBus?</h5>
                 <p class="faq-answer" id="answer6">Yes. You need to login to book a ticket</p>
             </div><hr>
             <div class="faq-item"> 
-                <h5 class="faq-question" onclick="toggleAnswer(7)"><i class="fas fa-chevron-right"></i>How many hours before we can cancel bus ticket?</h5>
+                <h5 class="faq-question" onclick="toggleAnswer(7)"><i class="bi bi-chevron-right"></i> How many hours before we can cancel bus ticket?</h5>
                 <p class="faq-answer" id="answer7">up to One (1) hour before the scheduled departure of the bus service from the Origin Point. </p>
             </div><hr>
         </section>

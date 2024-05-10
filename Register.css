@@ -45,6 +45,7 @@ h2{
     background-size: 23px;
     background-repeat: no-repeat;
 }
+
 #pass1[type=password]{
     background-color:transparent;
     border: 1px solid rgb(255, 255, 255);
@@ -75,7 +76,7 @@ input[type=checkbox]{
     border-color: white !important;
     outline: none;
 }
-#email[type=text]:focus {
+#email[type=email]:focus {
     border-width: 3px;
     border-color: white !important;
     outline: none;
@@ -90,7 +91,7 @@ input[type=checkbox]{
     border-color: white !important;
     outline: none;
 }
-#email[type=text]{
+#email[type=email]{
     background-color:transparent;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 50px; 
